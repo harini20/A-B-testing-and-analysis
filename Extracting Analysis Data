@@ -1,0 +1,8 @@
+#Combining all the 3 tables with the required columns.
+#ID, country,gender,group,device,Total Spent
+SELECT COALESCE(t1.id, t2.uid,t3.uid) AS id, t1.country, t1.gender, t2.group, t2.device, SUM(t3.spent) AS Total Spent
+FROM users t1
+FULL JOIN groups t2 on t1.id=t2.uid
+FULL JOIN activity t3 on COALESCE(t1.id,t2.uid)=t3.uid
+GROUP BY COALESCE(t1.id,t2.uid,t3.uid), t1.country, t1.gender,t2.group,t2.device
+ORDER BY id ASC;
