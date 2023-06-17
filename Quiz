@@ -1,0 +1,13 @@
+Understanding Extraction of data 
+1. Can a user show up more than once in the activity table? Yes or no, and why? 
+Yes, a user can make purchases on multiple days
+2. What type of join should we use to join the users table to the activity table?
+Inner Join
+3. What SQL function can we use to fill in NULL values? 
+coalesce()
+4. What are the start and end dates of the experiment?
+Jan 25,2023-Feb6,2023
+5. How many total users were in the experiment?
+48943
+6. How many users were in the control and treatment groups?
+Treatment: B group: 24600, Control: A group: 24343
