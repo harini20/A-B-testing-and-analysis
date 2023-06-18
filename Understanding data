@@ -1,4 +1,6 @@
 1. Can a user show up more than once in the activity table? Yes or no, and why?
+Yes a user can show up more than once in activity table. The activity table shows the amount spent on purchasing.
+The users appearing more than once have made purchases on multiple days.
 #users showing up count - 2094 total 
 select uid, count(uid) as counts
 from activity
@@ -19,3 +21,18 @@ select count(*) as total
 from cte;
 
 2. What type of join should we use to join the users table to the activity table?
+- Left join 
+#left joining users table with activity table 
+select COALESCE(users.id, activity.uid) AS id, country,gender,dt,device,spent
+from users
+left join activity 
+on users.id = activity.uid;
+
+#to find the total count of users - 49082
+with cte as(
+    select COALESCE(users.id, activity.uid) AS id, country,gender,dt,device,spent
+from users
+left join activity 
+on users.id = activity.uid)
+select count(*)
+from cte;
