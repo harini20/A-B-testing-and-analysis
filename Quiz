@@ -2,7 +2,7 @@ Understanding Extraction of data
 1. Can a user show up more than once in the activity table? Yes or no, and why? 
 Yes, a user can make purchases on multiple days
 2. What type of join should we use to join the users table to the activity table?
-Inner Join
+Left Join
 3. What SQL function can we use to fill in NULL values? 
 coalesce()
 4. What are the start and end dates of the experiment?
@@ -12,6 +12,11 @@ Jan 25,2023-Feb6,2023
 6. How many users were in the control and treatment groups?
 Treatment: B group: 24600, Control: A group: 24343
 7. What was the conversion rate of all users?
-4.63%
+4.28%
 8. What is the user conversion rate for the control and treatment groups?
-control: A: 4.63% , Treatment:B:3.92%
+control: A: 3.92% , Treatment:B:4.63%
+9. What is the average amount spent per user for the control and treatment groups, including users who did not convert?
+Control: $3.366, Treatment: $3.380
+10.Why is it helpful to include users who did not convert when calculating the average amount spent per user?
+In order to measure the impact on total revenue (amount spent), 
+we cannot only average the users who converted because there could have been fewer users who converted in the treatment.
