@@ -1,0 +1,21 @@
+1. Can a user show up more than once in the activity table? Yes or no, and why?
+#users showing up count - 2094 total 
+select uid, count(uid) as counts
+from activity
+group by uid;
+
+#users appearing more than once 
+select uid, count(uid) as counts
+from activity
+group by uid
+having count(uid) > 1;
+
+#Total users more than once in activity table - 139 users 
+with cte as(select uid, count(uid) as counts
+from activity
+group by uid
+having count(uid) > 1)
+select count(*) as total 
+from cte;
+
+2. What type of join should we use to join the users table to the activity table?
