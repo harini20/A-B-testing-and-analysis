@@ -36,3 +36,15 @@ left join activity
 on users.id = activity.uid)
 select count(*)
 from cte;
+
+4. What are the start and end dates of the experiment?
+#min date: join date: 2023-01-25 
+#max date: end date: 2023-02-26
+with cte as(SELECT COALESCE(t1.id, t2.uid,t3.uid) AS id, t2.join_dt, t3.dt
+FROM users t1
+FULL JOIN groups t2 on t1.id=t2.uid
+FULL JOIN activity t3 on COALESCE(t1.id,t2.uid)=t3.uid
+GROUP BY COALESCE(t1.id,t2.uid,t3.uid), t2.join_dt,t3.dt
+ORDER BY id ASC)
+select min(join_dt), max(dt)
+from cte;
