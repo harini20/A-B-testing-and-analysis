@@ -48,3 +48,15 @@ GROUP BY COALESCE(t1.id,t2.uid,t3.uid), t2.join_dt,t3.dt
 ORDER BY id ASC)
 select min(join_dt), max(dt)
 from cte;
+
+5. How many total users were in the experiment?
+# Total users from users table: 48943
+select count(distinct id) as users_count
+from users;
+
+6. How many users were in the control and treatment groups?
+#A: control: 24343 ,B:Treatment:24600
+SELECT count(COALESCE(t1.id, t2.uid)) AS id, t2.group as category
+FROM users t1
+left JOIN groups t2 on t1.id=t2.uid
+GROUP BY category;
