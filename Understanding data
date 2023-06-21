@@ -60,3 +60,34 @@ SELECT count(COALESCE(t1.id, t2.uid)) AS id, t2.group as category
 FROM users t1
 left JOIN groups t2 on t1.id=t2.uid
 GROUP BY category;
+
+7. 
+# created a new column and grouped by 0- 46849 and 1 - 2094
+with cte as(
+    SELECT coalesce(users.id, activity.uid) as id, 
+       coalesce(sum(activity.spent),0) as total,
+       case when coalesce(sum(activity.spent),0) > 0 then 1
+            else 0 end as converted
+from users
+left join activity on users.id=activity.uid
+group by COALESCE(users.id,activity.uid)
+order by total asc)
+select count(id), converted 
+from cte
+group by converted;
+
+with cte as(
+    SELECT coalesce(users.id, activity.uid) as id, 
+       coalesce(sum(activity.spent),0) as total,
+       case when coalesce(sum(activity.spent),0) > 0 then 1
+            else 0 end as converted
+from users
+left join activity on users.id=activity.uid
+group by COALESCE(users.id,activity.uid)
+order by total asc)
+    select id, converted
+from cte
+where converted = 1
+group by id, converted;
+
+
