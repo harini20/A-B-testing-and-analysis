@@ -19,6 +19,7 @@ group by coalesce(u.id, g.uid, a.uid),u.country,gender,g.device,category
 order by id ASC;
 
 
+# self analysis 
 #Total NOT NULL count 
 with cte as(
     select SUM(t2.spent)
