@@ -1,0 +1,13 @@
+1. Conduct a hypothesis test to see whether there is a difference in the conversion rate between the two groups. What are the resulting p-value and conclusion?
+Target Population : Whether there is a statistical difference introducing the banner or not 
+Null Hypothesis: There is no difference with banner
+Alternate Hypothesis: There is difference with banner 
+Independent Variable: Banner?
+Dependent variable: Revenue?
+
+Determine the test:
+which is conversion rate? total? or 1 and 0?
+If 1 and 0 then:
+- Conversion rate is a proportion 
+- Evaluating/ comparing 2 samples(A/B test)
+
