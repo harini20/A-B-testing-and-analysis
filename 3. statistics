@@ -30,10 +30,26 @@ We can decide which interval to use based on 2 factors that you should have dete
 
 Calculate the sample statistic 
 #The descriptive statistics to calculate sample statistics:
-Mean: 
+FOR TOTAL_SPENT Mean: 3.38273563 (Average)
 Median: 
 Mode: 
-Variance: 
-Standard deviation: 
+For total spent Variance: 659.2028411
+For total spent Standard deviation: 25.67494579
+
+The conversion rate for each group can be used to compare the performance of the two groups.
+Group A: 3.923099043   Control Group
+Group B: 4.630081301   Treatment Group 
+In this case, the treatment group has a higher conversion rate than the control group. 
+This means that the treatment group is more likely to convert than the control group.
+
+Calculate the Standard error
+the difference in the conversion rates =  0.71
+The standard error is a measure of how much variation there is in the difference in the conversion rates.
+
+Formula:
+standard error = sqrt((p1*(1-p1)/n1) + (p2*(1-p2)/n2))
+sqrt((0.05*(1-0.05)/24600)+(0.04*(1-0.04)/24343))
+sqrt((0.05*0.95/24600)+(0.04*0.96/24343))
+sqrt(3.51) = 1.87
 
 
