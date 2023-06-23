@@ -5,9 +5,35 @@ Alternate Hypothesis: There is difference with banner
 Independent Variable: Banner?
 Dependent variable: Revenue?
 
-Determine the test:
-which is conversion rate? total? or 1 and 0?
-If 1 and 0 then:
+Determine the type of test:
+which is conversion rate? 
+CONVERTED COLUMN HAVING 0 AND 1
+the mean of a binary variable- A binary variable is a variable that can take on only two values, such as 0 or 1, success or failure, yes or no. 
+The mean of a binary variable is the proportion of successes. In the example above, the mean of the binary variable conversion would be 0.2, which is equal to the conversion rate of 20%.
+is asking about the mean of a binary variable, which is a proportion.
+
 - Conversion rate is a proportion 
 - Evaluating/ comparing 2 samples(A/B test)
+- TWO-TAILED TEST 
+we are interested in whether the conversion rate in the control group is different from the conversion rate in the treatment group. 
+
+Calculate Test statistic:
+
+2. What is the 95% confidence interval for the difference in the conversion rate between the treatment and control (treatment-control)?
+
+Determine what type of interval you are computing
+We can decide which interval to use based on 2 factors that you should have determined in the previous question:
+1. Are we working with proportions or means?
+- Proportions 
+2. Are we evaluating one sample or comparing two samples?
+- 2 samples 
+
+Calculate the sample statistic 
+#The descriptive statistics to calculate sample statistics:
+Mean: 
+Median: 
+Mode: 
+Variance: 
+Standard deviation: 
+
 
