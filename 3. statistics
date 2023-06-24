@@ -37,19 +37,58 @@ For total spent Variance: 659.2028411
 For total spent Standard deviation: 25.67494579
 
 The conversion rate for each group can be used to compare the performance of the two groups.
-Group A: 3.923099043   Control Group
-Group B: 4.630081301   Treatment Group 
+Group A: 0.04   Control Group
+Group B: 0.05   Treatment Group 
 In this case, the treatment group has a higher conversion rate than the control group. 
 This means that the treatment group is more likely to convert than the control group.
+sample statistic: p1 - p2
+p1 = conversion rate for treatment group 
+p2 = conversion rate for control group 
+the difference in the conversion rates =  0.05 - 0.04 = 0.01
 
 Calculate the Standard error
-the difference in the conversion rates =  0.71
 The standard error is a measure of how much variation there is in the difference in the conversion rates.
 
 Formula:
 standard error = sqrt((p1*(1-p1)/n1) + (p2*(1-p2)/n2))
 sqrt((0.05*(1-0.05)/24600)+(0.04*(1-0.04)/24343))
-sqrt((0.05*0.95/24600)+(0.04*0.96/24343))
-sqrt(3.51) = 1.87
+the standard error of the difference in the proportions = 0.002
+
+calculate the Critical value 
+95% confidence for an assumed normal distribution 
+100-95 = 5%
+The bell curve is 2.5% and 2.5%
+100-2.5 = 97.5
+The z score is found for the value close to 97.5 -> 0.975
+z-score for the 95% confidence level = 1.96
+
+critical value = 1.96. 
+This means that the probability that a value drawn from the standard normal distribution <= 1.96 =  0.975. 
+This is the probability that is used in the NORM.INV function.
+
+Construct the interval
+margin of error = critical value * standard error
+1.96 * 0.002
+0.004
+
+Confidence Interval = (Lower bound, Upper bound)
+Lower bound = 0.01 - 0.004 = 0.006
+Upper bound = 0.01 + 0.004 = 0.014
+Confidence Interval = (0.006, 0.014) 
+
+3. Conduct a hypothesis test to see whether there is a difference in the average amount spent per user between 
+the two groups. What are the resulting p-value and conclusion?Use the t distribution and a 5% significance level. 
+Assume unequal variance.
+Determine the null and alternative hypothesis:
+to test the hypothesis that the average amount spent is different between the two groups.
+null hypothesis -  average amount spent is the same for both groups. 
+alternative hypothesis - average amount spent is different for the two groups.
+
+Determine what type of test you are using:
+conversion rate is proportion 
+
+4. What is the 95% confidence interval for the difference in the average amount spent per user between the treatment
+and the control (treatment-control)?Use the t distribution and assume unequal variance.
+
 
 
