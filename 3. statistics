@@ -126,6 +126,18 @@ alternative hypothesis - average amount spent is different for the two groups.
 
 Determine what type of test you are using:
 conversion rate is proportion 
+test statistic (T):
+T = ((x̄1 - x̄2) - μ0) / sqrt((s1^2 / n1) + (s2^2 / n2))
+T ≈ 0.016 / 0.366 = 0.0437
+
+df = min(n1 - 1, n2 - 1) = min(24599, 24342) = 24342
+d = x1 - x2 = 3.391 - 3.375 = 0.016
+SE = sqrt((s1^2 / n1) + (s2^2 / n2)) = sqrt((25.414^2 / 24600) + (25.936^2 / 24343)) = 0.038
+t = d / SE = 0.016 / 0.038 = 0.421
+
+p-value = 2 * P(T > |T|)
+p-value ≈ 0.964
+Since the p-value is greater than the significance level, we do not have sufficient evidence to reject the null hypothesis.
 
 4. What is the 95% confidence interval for the difference in the average amount spent per user between the treatment
 and the control (treatment-control)?Use the t distribution and assume unequal variance.
