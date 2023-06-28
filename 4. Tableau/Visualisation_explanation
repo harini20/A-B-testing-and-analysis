@@ -5,6 +5,12 @@ Conclusion:
 Group B has a slightly higher conversion rate and a slightly higher average amount spent compared to group A.
 
 4. Create visualisations to explore the relationship between the test metrics and the user's gender.
+The NULL category is present in the visualisation. This approach allows to include the missing values in the visualisation while distingusing 
+them form the known gender categories. 
+Conversion rate:
+To identify any significant variations in the likelihood of users from different genders completing a purchase. The highest is the conversion rate of females
+and the next is NULL category.
+Average amount spent:
 
 
 
