@@ -3,3 +3,19 @@ Conversion rate: The conversion rate for group B is higher than group A. This in
 Average amount: The average amount spent by group B is slightly higher than the average amount spent by users in group A. But the difference is small.
 Conclusion:
 Group B has a slightly higher conversion rate and a slightly higher average amount spent compared to group A.
+
+4. 
+
+
+
+5. Create visualizations to explore the relationship between the test metrics(conversion rate and average amount spent) and the user's country.
+Based on the grouped bar chart visualisation:
+Grouped bar chart is used to display multiple metrics side by side for each category enabling a direct comparison between the metrics within each country.
+Conversion rate:
+1. Canada has highest conversion rate followed by USA and Brazil.
+2. Australia and Europe have relatively lower conversion rates.
+Average amount spent:
+1. USA has the highest average amount spent followed by Canada and Brazil.
+2. Australia and Europe has lower average amounts spent compared to other regions.
+It highlights regional variations and allows for comparison across different countries within each region.
+
