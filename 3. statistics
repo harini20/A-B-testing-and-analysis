@@ -49,12 +49,12 @@ In hypothesis testing, the p-value is a measure of the evidence against the null
 
 p-value < 0.05
 0 < 0.05
-we reject the null hypothesis in favor of the alternative hypothesis. 
+
 Since the p-value is less than the significance level (0 < 0.05), we reject the null hypothesis in favor of the alternative hypothesis.
-
-Therefore, we can conclude that there is strong statistical evidence to suggest that the true difference in proportions between the treatment and control groups is not equal to the assumed value (p0). The proportions of the treatment and control groups are significantly different.
-
-In summary, the analysis supports the alternative hypothesis (H1:p1−p2<>p0), indicating that there is a significant difference in proportions between the treatment and control groups. The treatment appears to have a meaningful impact on the proportion of users compared to the assumed value.
+Therefore, we can conclude that there is strong statistical evidence to suggest that the true difference in proportions between the treatment and control groups 
+is not equal to the assumed value (p0). The proportions of the treatment and control groups are significantly different.
+In summary, the analysis supports the alternative hypothesis (H1:p1−p2<>p0), indicating that there is a significant difference in proportions 
+between the treatment and control groups. The treatment appears to have a meaningful impact on the proportion of users compared to the assumed value.
 
 
 2. What is the 95% confidence interval for the difference in the conversion rate between the treatment and control (treatment-control)?
@@ -118,10 +118,11 @@ Lower bound = 0.01 - 0.00676 = 0.0032
 Upper bound = 0.01 + 0.00676 = 0.0168
 Confidence Interval = (0.0032, 0.0168) 
 
-Since the confidence interval does not include zero, we can conclude that there is a statistically significant difference between the proportions of the treatment and control groups. The treatment group has a higher proportion than the control group, with an estimated difference ranging from 0.0032 to 0.0168.
-
-In summary, we can conclude that the treatment appears to have a significant effect on the proportion of users, with a higher proportion of users in the treatment group compared to the control group.
-
+Since the confidence interval does not include zero, we can conclude that there is a statistically significant difference between the 
+proportions of the treatment and control groups. The treatment group has a higher proportion than the control group, 
+with an estimated difference ranging from 0.0032 to 0.0168.
+In summary, we can conclude that the treatment appears to have a significant effect on the proportion of users, 
+with a higher proportion of users in the treatment group compared to the control group.
 
 
 3. Conduct a hypothesis test to see whether there is a difference in the average amount spent per user between 
@@ -148,12 +149,13 @@ p-value ≈ 0.964
 Since the p-value is greater than the significance level, we do not have sufficient evidence to reject the null hypothesis.
 
 Based on the provided calculations and assuming a significance level of 0.05, we can interpret the conclusion as follows:
-
-The calculated t-value is 0.421, and the corresponding p-value is approximately 0.964. Since the p-value is greater than the significance level (0.964 > 0.05), we do not have sufficient evidence to reject the null hypothesis.
-
-Therefore, we conclude that there is no statistically significant difference between the average amount spent per user in the treatment and control groups. The observed difference of 0.016 (or 0.0437 when considering the standardized t-value) is likely due to random variation or sampling variability. Any apparent difference between the two groups is not likely to be meaningful or significant in a broader population context.
-
-In summary, based on the p-value being greater than the significance level, we fail to reject the null hypothesis, suggesting that there is no significant difference in the average amount spent per user between the treatment and control groups.
+The calculated t-value is 0.421, and the corresponding p-value is approximately 0.964. 
+Since the p-value is greater than the significance level (0.964 > 0.05), we do not have sufficient evidence to reject the null hypothesis.
+Therefore, we conclude that there is no statistically significant difference between the average amount spent per user in the treatment and control groups. 
+The observed difference of 0.016 (or 0.0437 when considering the standardized t-value) is likely due to random variation or sampling variability. 
+Any apparent difference between the two groups is not likely to be meaningful or significant in a broader population context.
+In summary, based on the p-value being greater than the significance level, we fail to reject the null hypothesis, 
+suggesting that there is no significant difference in the average amount spent per user between the treatment and control groups.
 
 
 4. What is the 95% confidence interval for the difference in the average amount spent per user between the treatment
@@ -165,51 +167,43 @@ s₂ = 25.936 (sample standard deviation of control group)
 n₁ = 24600 (sample size of treatment group)
 n₂ = 24343 (sample size of control group)
 
-First, we calculate the degrees of freedom (df) using the formula:
-
+degrees of freedom (df) using the formula:
 df = min(n₁ - 1, n₂ - 1)
-
 df = min(24600 - 1, 24343 - 1)
 df = min(24599, 24342)
 df = 24342
 
 standard error (SE) using the formula:
-
 SE = sqrt((s₁² / n₁) + (s₂² / n₂))
-
 SE = sqrt((25.414² / 24600) + (25.936² / 24343))
-
 SE ≈ sqrt((645.970996 / 24600) + (671.746496 / 24343))
 SE ≈ sqrt(0.0262748 + 0.0275933)
 SE ≈ sqrt(0.0538681)
 SE ≈ 0.232173
-
-95% confidence level using the t-distribution with df degrees of freedom. Since the distribution is two-tailed, we want the critical value that leaves 2.5% in each tail, so α = 0.05 / 2 = 0.025.
+95% confidence level using the t-distribution with df degrees of freedom. 
+Since the distribution is two-tailed, we want the critical value that leaves 2.5% in each tail, so α = 0.05 / 2 = 0.025.
 
 CV = t(1 - α/2, df)
 = t(1 - 0.025, 24342)
 CV ≈ 1.96
 
-Finally, we can calculate the confidence interval (CI) using the formula:
-
+confidence interval (CI) using the formula:
 CI = (x̄₁ - x̄₂) ± (CV * SE)
-
 CI = (3.391 - 3.375) ± (1.96 * 0.232173)
 CI = 0.016 ± 0.454079
 CI ≈ (-0.438, 0.470)
 
-Therefore, the 95% confidence interval for the difference in the average amount spent per user between the treatment and control groups is approximately (-0.438, 0.470).
-Based on the above confidence interval (-0.438, 0.470) for the difference in the average amount spent per user between the treatment and control groups, we can conclude the following:
-
-The range of values (-0.438 to 0.470) represents the likely range for the true difference in the average amount spent per user between the treatment and control groups.
-
-Since the interval contains both positive and negative values, we cannot conclude with certainty whether there is a statistically significant difference between the treatment and control groups in terms of the average amount spent per user.
-
-The interval includes the value zero, which suggests that there is a possibility that the average amount spent per user in the treatment group is equal to the average amount spent per user in the control group.
-
+Therefore, the 95% confidence interval for the difference in the average amount spent per user between the treatment and control groups is 
+approximately (-0.438, 0.470) we can conclude the following:
+The range of values (-0.438 to 0.470) represents the likely range for the true difference in the average amount spent per user between the treatment and 
+control groups.
+Since the interval contains both positive and negative values, we cannot conclude with certainty whether there is a statistically significant difference 
+between the treatment and control groups in terms of the average amount spent per user.
+The interval includes the value zero, which suggests that there is a possibility that the average amount spent per user in the treatment group is 
+equal to the average amount spent per user in the control group.
 Further analysis or additional data might be needed to determine if there is a statistically significant difference between the two groups.
-
-In summary, based on the provided confidence interval, we cannot definitively conclude whether there is a significant difference in the average amount spent per user between the treatment and control groups.
+In summary, based on the provided confidence interval, we cannot definitively conclude whether there is a significant difference in the 
+average amount spent per user between the treatment and control groups.
 
 
 
