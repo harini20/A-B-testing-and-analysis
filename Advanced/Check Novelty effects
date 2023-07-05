@@ -1,0 +1,13 @@
+# date and metrics for each group in separate columns 
+select 
+coalesce(u.id,g.uid,a.uid) as id,
+a.dt as date,
+COALESCE(sum(case when g.group = 'A' THEN a.spent else 0 end),0) as groupA_spent,
+COALESCE(count(case when g.group = 'A' and a.spent > 0 then 1 end),0) as groupA_conversions,
+COALESCE(sum(case when g.group = 'B' THEN a.spent else 0 end),0)as groupB_spent,      
+COALESCE(count(case when g.group = 'B' and a.spent > 0 then 1 end),0) as groupB_conversions
+from users u 
+left join groups g on u.id = g.uid
+left join activity a on coalesce(u.id,g.uid)=a.uid
+group by coalesce(u.id,g.uid,a.uid), date
+order by a.dt ASC;
