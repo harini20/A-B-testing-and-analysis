@@ -1,3 +1,5 @@
+Explore the sample size calculators below to figure out how many users we should have aimed to have in our test before making a conclusion.
+Identifying the specific statistical test or analysis plan to conduct A/B test. For example, comparing two proportions
 Baseline Conversion Rate = (C_converted / C_total) * 100
 A: control group converted = C_converted
 C_converted = 956
@@ -18,6 +20,7 @@ MDE = (0.00393 / 0.0393) * 100
 = 10%
 Minimum Detectable Effect (MDE) = 10%.
 To observe at least a 10% difference in the conversion rate between the treatment group and the control group to consider it statistically significant.
-
-A/B Split Ratio = Number of users in Group B / (Number of users in Group A + Number of users in Group B)
-A/B Split Ratio = 24,600 / (24,343 + 24,600) = 0.5015 (or 50.15%) = 0.5
+Calculated the sample sizes for the experiment: 40300
+The actual size of the experiment: 48943
+The fact that your actual sample size is larger than the calculated sample size suggests that you have collected more data than initially estimated. 
+In conclusion, having a sample size larger than the calculated size indicates that you have collected more data than initially planned, which can potentially lead to more reliable and powerful results. 
