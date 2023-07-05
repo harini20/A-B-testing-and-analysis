@@ -1,0 +1,21 @@
+Baseline Conversion Rate = (C_converted / C_total) * 100
+A: control group converted = C_converted
+C_converted = 956
+C_total = 24343
+956/24343 = 3.93%
+Baseline Conversion Rate = 3.93%
+
+Relative Change = 10%
+Absolute Improvement = Baseline Conversion Rate * Relative Change
+= 3.93% * 0.10
+= 0.393%
+desired lift = 0.393% (0.00393 as a decimal)
+To observe at least a 10% difference in the conversion rate between the treatment group and the control group to consider it statistically significant.
+
+MDE = (Desired Lift / Baseline Conversion Rate) * 100
+MDE = (0.00393 / 0.0393) * 100
+= 0.10 * 100
+= 10%
+Minimum Detectable Effect (MDE) = 10%.
+
+To observe at least a 10% difference in the conversion rate between the treatment group and the control group to consider it statistically significant.
