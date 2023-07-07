@@ -1,22 +1,29 @@
 1. Write a SQL query that returns: the user ID, the user’s country, the user’s gender, the user’s device type, the user’s test group, 
 whether or not they converted (spent > $0), and how much they spent in total ($0+). 
 # left joined all the 3 tables
-select 
-    coalesce(u.id, g.uid, a.uid) as id,
+SELECT
+    coalesce(u.id, g.uid, a.uid) as user_id,
     u.country,
-    coalesce(u.gender,'unknown') as gender,
+    u.gender,
     g.device,
-    g.group as category, 
-    case 
-        when sum(a.spent)>0 then 1
-        else 0
-    end as converted,
-    coalesce(sum(a.spent),0) as total_spent
-from users u 
-left join groups g on u.id=g.uid
-left join activity a on coalesce(u.id, g.uid) = a.uid
-group by coalesce(u.id, g.uid, a.uid),u.country,gender,g.device,category
-order by id ASC;
+    g.group as category,
+    CASE
+        WHEN COALESCE(SUM(a.spent), 0) > 0 THEN 1
+        ELSE 0
+    END AS converted,
+    COALESCE(SUM(a.spent), 0) AS total_spent
+FROM
+    users u
+LEFT JOIN groups g ON u.id = g.uid
+LEFT JOIN activity a ON coalesce(u.id, g.uid) = a.uid
+GROUP BY
+    coalesce(u.id, g.uid, a.uid),
+    u.country,
+    u.gender,
+    g.device,
+    g.group
+ORDER BY
+    user_id ASC;
 
 
 # self analysis 
