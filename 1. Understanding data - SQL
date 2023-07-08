@@ -76,4 +76,21 @@ from cte;
 
 8. 
 
+SELECT g.group AS test_group,
+       COUNT(DISTINCT CASE WHEN a.uid IS NOT NULL THEN u.id END) AS 
+converted_users,
+       COUNT(DISTINCT u.id) AS total_users,
+       (COUNT(DISTINCT CASE WHEN a.uid IS NOT NULL THEN u.id END) * 
+100.0 / NULLIF(COUNT(DISTINCT u.id), 0)) AS conversion_rate
+FROM groups g
+LEFT JOIN users u ON g.uid = u.id
+LEFT JOIN activity a ON a.uid = u.id
+GROUP BY g.group
 
+9. 
+SELECT g.group AS test_group,
+       AVG(a.spent) AS average_amount_spent
+FROM groups g
+LEFT JOIN Users u ON g.uid = u.id
+LEFT JOIN Activity a ON a.uid = u.id
+GROUP BY g.group;
